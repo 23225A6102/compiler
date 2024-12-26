@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compiler WebApp</title>
+    <style>
+        /* Body Styling */
+        body {
+            background-color: #121212;
+            color: #E0E0E0;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        h1 {
+            color: #BB86FC;
+            font-size: 3rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Form Styling */
+        form {
+            background-color: #1E1E1E;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+            width: 80%;
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        /* Label Styling */
+        label {
+            color: #BB86FC;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            display: block;
+            text-align: left;
+            width: 100%;
+        }
+
+        /* Textarea Styling */
+        textarea {
+            width: 100%;
+            background-color: #2C2C2C;
+            color: #E0E0E0;
+            border: 1px solid #BB86FC;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 1.2rem;
+            resize: vertical;
+            min-height: 300px; /* Increased height */
+            transition: all 0.3s ease;
+        }
+
+        /* Textarea Focus Styling */
+        textarea:focus {
+            outline: none;
+            border-color: #03DAC5;
+            background-color: #333333;
+        }
+
+        /* Button Styling */
+        button {
+            background-color: #6200EE;
+            color: #E0E0E0;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        /* Button Hover Effect */
+        button:hover {
+            background-color: #3700B3;
+            transform: scale(1.05);
+        }
+
+        /* Button Focus Effect */
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 8px rgba(98, 0, 238, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Compiler WebApp</h1>
+        <form id="compilerForm">
+            <label for="code">Enter Code:</label><br>
+            <textarea id="code" name="code" rows="15" cols="50"></textarea><br>
+            <button type="submit">Compile</button>
+        </form>
+    </div>
+
+    <script>
+        // Get the form and add a submit event listener
+        const form = document.getElementById('compilerForm');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission
+
+            const code = document.getElementById('code').value;
+
+            // Show entered code in an alert (or log it to console)
+            alert('Code Entered: \n' + code);
+
+            // Optionally, log it to the console for testing
+            console.log('Code Entered:', code);
+        });
+    </script>
+</body>
+</html>

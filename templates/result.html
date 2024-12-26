@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compiler Results</title>
+    <style>
+        /* Global Body Styling */
+        body {
+            background-color: #121212;
+            color: #E0E0E0;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            height: 100vh;
+            padding-top: 40px;
+        }
+
+        /* Header Styling */
+        h1 {
+            color: #BB86FC;
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #BB86FC;
+            font-size: 1.8rem;
+            margin-top: 30px;
+        }
+
+        /* Token Table and AST Styling */
+        .result-container {
+            width: 80%;
+            max-width: 900px;
+            margin: 20px;
+            background-color: #1E1E1E;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Token Table Styling */
+        .token-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .token-table th, .token-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #333333;
+        }
+
+        .token-table th {
+            background-color: #6200EE;
+            color: #E0E0E0;
+        }
+
+        .token-table td {
+            background-color: #2C2C2C;
+        }
+
+        /* AST Styling */
+        pre {
+            background-color: #2C2C2C;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            color: #E0E0E0;
+            overflow-x: auto;
+        }
+
+        /* Back Button Styling */
+        a {
+            color: #03DAC5;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            text-align: center;
+            display: block;
+        }
+
+        a:hover {
+            color: #BB86FC;
+        }
+    </style>
+</head>
+<body>
+    <h1>Compilation Results</h1>
+
+    <div class="result-container">
+        <h2>Token Table:</h2>
+        <table class="token-table">
+            <!-- Example table, you can dynamically render token rows -->
+            {{ token_table|safe }}
+        </table>
+
+        <h2>Abstract Syntax Tree (AST):</h2>
+        <pre>{{ ast_structure }}</pre>
+    </div>
+
+    <a href="/">Back</a>
+</body>
+</html>
